@@ -1,0 +1,32 @@
+<!-- templates/base/base.html -->
+<head>
+    <!--    Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../../static/assets/css/semantic.min.css">
+    <title>Traffic Lights Simulator</title>
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui container menu" id="nlp_core_menu">
+            <h1 class="ui" style="margin: auto">Traffic Lights Simulator</h1>
+        </div>
+        <div class="ui icon message">
+            <i class="lightbulb icon" style="color: red"></i>
+            <i class="lightbulb icon" style="color: orange"></i>
+            <i class="lightbulb icon" style="color: green"></i>
+            <div class="paragraph">
+                <p class="ui" style="font-size: 150%">
+                    Welcome to traffic lights simulator application. In this application you will be able to add traffic lights, setup the delay timer and operate the light signals synchronously and seamlessly.
+                    <br><br> Are you excited to use our state of the art simulation?
+                    <br><br> please click here, <a href="/simulatorHome"><b>SIMULATOR</b></a> to use enter and experience our simulation world!!
+                </p>
+            </div>
+        </div>
+    </div>
+    {% block body_block %}
+    {% endblock %}
+    <script type="text/javascript" src="../../static/assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/semantic.min.js"></script>
+    <script type="text/javascript" src="../../static/assets/js/base/base.js"></script>
+</body>

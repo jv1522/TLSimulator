@@ -1,0 +1,49 @@
+{% extends "../base/simulator_base.html" %}
+{% block body_block %}
+<br><br><br>
+<div class="ui container grid" id="simulationContent">
+    <div class="eight wide column" id="formContent">
+        <div class="ui negative message" id="alert_box" hidden>
+            <i class="close icon" id="ir_close_icon" onclick="javascript:hideAlertBox()"></i>
+            <div class="header">
+                There were some errors with your submission
+            </div>
+            <p id="alert_message"></p>
+        </div>
+        <form class="ui form" id="simulationInputForm">
+            <div class="fields">
+                <div class="field">
+                    <label for="numberOfLignts">No. of Lights</label>
+                    <input id="numberOfLignts" name="numberOfLignts" type="number" placeholder="Any number < 5">
+                </div>
+                <div class="field">
+                    <label for="signalDelay">Go Signal Duration</label>
+                    <input id="signalDelay" name="signalDelay" type="number" placeholder="Any number > 4">
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="ui buttons">
+            <button class="ui positive button" type="button" onclick="javascript:getLights()">Start Simulation</button>
+            <div class="or"></div>
+            <button class="ui button" onclick="javascript:clearSimulationForm()">Clear</button>
+            <div class="or"></div>
+            <button class="ui negative button" type="button" onclick="javascript:stopSimulation()">Stop Simulation</button>
+        </div>
+        <br><br><br>
+        <div class="ui segment" id="exit_loader" hidden>
+            <p id="exit_message" style="color:white">Exiting Traffic Light Simulator</p>
+            <div class="ui active dimmer">
+                <div class="ui text loader">
+                    Exiting Traffic Light Simulator
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="eight wide column" id="outputContent">
+        <div class="ui grid" id="LightsContainer">
+            <!--            Lights to be populated here-->
+        </div>
+    </div>
+</div>
+{% endblock body_block %}
